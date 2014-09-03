@@ -4,7 +4,11 @@
   </aside>
   <section class="main-container">
     <header class="main-header">JabberBlocy</header>
-    {{> messageList}}
-    {{> newMessage}}
+    {{#if currentUser}}
+      {{> messageList}}
+      {{> newMessage}}
+    {{else}}
+      {{> loginPage}}
+    {{/if}}
   </section>
 </template>
